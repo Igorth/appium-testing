@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.igordias.appium.FeatureCadastro" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-11T19:48:02" hostname="Igors-MacBook-Pro.local" time="7.806">
+<testsuite name="com.igordias.appium.FeatureCadastro" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-11T19:58:06" hostname="Igors-MacBook-Pro.local" time="12.072">
   <properties/>
-  <testcase name="can_not_register_users_with_passwords_that_do_not_match()" classname="com.igordias.appium.FeatureCadastro" time="7.806"/>
+  <testcase name="When the user try to sign up with different passwords, then show me a error message 'Senhas não conferem'" classname="com.igordias.appium.FeatureCadastro" time="12.072"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Nov 11, 2021 3:48:09 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+  <system-err><![CDATA[Nov 11, 2021 3:58:14 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
