@@ -34,6 +34,8 @@ public class FeatureCadastro {
         MobileElement erro = (MobileElement)driver.findElementById("br.com.alura.aluraesporte:id/erro_cadastro");
 
         assertEquals("Senhas não conferem", erro.getText());
+
+        driver.navigate().back();
     }
 
     @Test
