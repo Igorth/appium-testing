@@ -12,8 +12,16 @@ import java.net.URL;
 public class AppiumDriverConfig {
 
     public final AppiumDriver driver;
+    private static AppiumDriverConfig _instance;
 
-    public AppiumDriverConfig() throws MalformedURLException {
+    public static AppiumDriverConfig Instance() {
+        if(AppiumDriverConfig._instance == null) {
+            AppiumDriverConfig._instance = new AppiumDriverConfig();
+        }
+        return AppiumDriverConfig._instance;
+    }
+
+    private AppiumDriverConfig() throws MalformedURLException {
         File apk = new File("/Users/igordias/IdeaProjects/appium-project/src/main/resources/alura_esporte.apk");
 
         DesiredCapabilities configs = new DesiredCapabilities();
