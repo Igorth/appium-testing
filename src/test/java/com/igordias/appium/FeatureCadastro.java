@@ -1,8 +1,8 @@
 package com.igordias.appium;
 
 import com.igordias.appium.PageObjects.CadastroPageObject;
+import com.igordias.appium.PageObjects.LoginPageObject;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.NoSuchElementException;
@@ -17,11 +17,10 @@ public class FeatureCadastro {
     public void can_not_register_users_with_passwords_that_do_not_match() {
         AppiumDriver driver = AppiumDriverConfig.Instance().driver;
 
-        MobileElement botaoCadastro = (MobileElement)driver.findElementById(
-                "br.com.alura.aluraesporte:id/login_botao_cadastrar_usuario");
-        botaoCadastro.click();
+        LoginPageObject telaLogin = new LoginPageObject(driver);
+        telaLogin.BuscarElementos();
 
-        CadastroPageObject telaCadastro = new CadastroPageObject(driver);
+        CadastroPageObject telaCadastro = telaLogin.IrParaTelaDeCadastro();
         telaCadastro.BuscarElementos();
         telaCadastro.Cadastrar("Igor", "123", "456");
         assertEquals("Senhas não conferem", telaCadastro.MensagemErro());
@@ -34,14 +33,11 @@ public class FeatureCadastro {
     public void register_users_with_matching_passwords() throws NoSuchElementException {
         AppiumDriver driver = AppiumDriverConfig.Instance().driver;
 
-        MobileElement botaoCadastro = (MobileElement)driver.findElementById(
-                "br.com.alura.aluraesporte:id/login_botao_cadastrar_usuario");
-        botaoCadastro.click();
-
-        CadastroPageObject telaCadastro = new CadastroPageObject(driver);
+        LoginPageObject telaLogin = new LoginPageObject(driver);
+        telaLogin.BuscarElementos();
+        CadastroPageObject telaCadastro = telaLogin.IrParaTelaDeCadastro();
         telaCadastro.BuscarElementos();
-        telaCadastro.Cadastrar("Igor","123","123");
-
-        MobileElement botaoLogar = (MobileElement)driver.findElementById("br.com.alura.aluraesporte:id/login_botao_logar");
+        telaLogin = telaCadastro.Cadastrar("Igor", "123", "123");
+        telaLogin.BuscarElementos();
     }
 }
