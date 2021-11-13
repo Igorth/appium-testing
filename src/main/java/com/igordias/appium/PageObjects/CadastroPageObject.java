@@ -2,6 +2,9 @@ package com.igordias.appium.PageObjects;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CadastroPageObject {
 
@@ -36,7 +39,10 @@ public class CadastroPageObject {
     }
 
     public String MensagemErro() {
-        mensagemErro = (MobileElement)driver.findElementById("br.com.alura.aluraesporte:id/erro_cadastro");
+        By errorId = By.id("br.com.alura.aluraesporte:id/erro_cadastro");
+        WebDriverWait espera = new WebDriverWait(driver, 3);
+        espera.until(ExpectedConditions.presenceOfElementLocated(errorId));
+        mensagemErro = (MobileElement)driver.findElement(errorId);
         return mensagemErro.getText();
     }
 }
