@@ -61,8 +61,7 @@ A green button (a play) should appear next to the class name on line 13, just pr
 The tests will be compiled and the results will be displayed on the Intellij run screen.
 
 
-ScreenShot.png
-![Appium Running](https://github.com/Igorth/appium-testing/ScreenShot.png)
+![Appium Running](https://github.com/Igorth/appium-testing/ScreenShot.png )
 
 ### Reports
 
