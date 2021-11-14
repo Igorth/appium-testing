@@ -1,9 +1,6 @@
 # Appium Testing
 
-This is an example of an automated test framework for studying both programming and automated testing.
-
-The objective of this work was to learn how to use the best tools to create our automated test
-and be able to create our test framework in the best way possible.
+Learning how to use Appium to run automated tests on a simple registration APK.
 
 ### How will execute the tests:
 - Appium
@@ -63,6 +60,9 @@ A green button (a play) should appear next to the class name on line 13, just pr
 
 The tests will be compiled and the results will be displayed on the Intellij run screen.
 
+
+ScreenShot.png
+![Appium Running](https://github.com/Igorth/appium-testing/ScreenShot.png)
 
 ### Reports
 

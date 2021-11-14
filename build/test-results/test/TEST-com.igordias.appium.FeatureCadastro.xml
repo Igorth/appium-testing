@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.igordias.appium.FeatureCadastro" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-13T14:44:24" hostname="Igors-MacBook-Pro.local" time="16.876">
+<testsuite name="com.igordias.appium.FeatureCadastro" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-11-14T22:19:38" hostname="Igors-MacBook-Pro.local" time="21.937">
   <properties/>
-  <testcase name="When the user try to sign up with different passwords, then show me a error message 'Senhas não conferem'" classname="com.igordias.appium.FeatureCadastro" time="16.876"/>
+  <testcase name="When the user try to sign up with different passwords, then show me a error message 'Senhas não conferem'" classname="com.igordias.appium.FeatureCadastro" time="16.28"/>
+  <testcase name="When the user try to sign up with equals passwords, then the user is redirect to the home page" classname="com.igordias.appium.FeatureCadastro" time="5.656"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Nov 13, 2021 10:44:36 AM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+  <system-err><![CDATA[Nov 14, 2021 6:19:48 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
